@@ -1,4 +1,4 @@
-# Damn Vulnerable Student Information System (Author: [sashaNull](https://github.com/s4shaNull))
+# Damn Vulnerable Student Information System (Author: [sashaNull](https://github.com/sashaNull))
 
 ## 1. Description:
 Oh no, it's that time of year again for course registration, and Sasha, the Software Engineer, is facing a bit of a situation. The SIS for VinUni is still a work in progress thanks to Sasha's procrastination.
