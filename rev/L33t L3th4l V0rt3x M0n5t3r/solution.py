@@ -1,7 +1,7 @@
-# you can get the logic of the binary by either 3 ways: 
+# 3 ways to solve: 
 # + Using ChatGPT/GitHub Copilot/any tools you have. 
 # + clang -o wyvern wyvern.ll and using IDA/BinaryNinja 
-# + Read directly the LLVM IR :) 
+# + Read the LLVM IR directly :) 
 
 from pwn import *
 
