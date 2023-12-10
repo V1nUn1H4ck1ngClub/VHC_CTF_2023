@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: weliketoshop
+    image: weliketoshop:latest
+    ports:
+      - "5000:5000"
+    restart: on-failure

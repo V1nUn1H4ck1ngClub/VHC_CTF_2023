@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{{ item.name }} Description</title>
+</head>
+<body>
+    
+    <h1>{{ item.name }} description</h1>
+    <div>
+        <!-- Cart icon linking to the cart page -->
+        <a href="{{ url_for('cart') }}">
+            <i class="fa fa-shopping-cart" style="font-size:24px; color=black;"></i>
+        </a>
+        
+        <!-- Display the user's money -->
+        <p>Your balance: ${{ user_balance }}</p>
+    </div>
+    
+    <p>{{ item.description }}</p>
+    <p>Price: ${{ item.price }}</p> 
+
+    <!-- Button to add the item to the cart -->
+   <!-- Add this button for each item -->
+    <form action="{{ url_for('add_to_cart', item_id=item.name) }}" method="POST">
+        <button type="submit">Add to Cart</button>
+    </form>
+    <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+</body>
+</html>

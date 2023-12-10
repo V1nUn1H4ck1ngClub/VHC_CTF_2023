@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  app:
+    # remember to change the container_name and image name. 
+    container_name: curve_my_grade
+    image: curve_my_grade:latest
+    ports:
+      - "13375:13375"
+    restart: on-failure

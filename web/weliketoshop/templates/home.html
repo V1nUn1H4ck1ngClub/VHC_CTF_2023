@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shopping Website</title>
+</head>
+<body>
+    <h1>Welcome to our Shopping Website!</h1>
+    
+    <div>
+        <!-- Cart icon linking to the cart page -->
+        <a href="{{ url_for('cart') }}">
+            <i class="fa fa-shopping-cart" style="font-size:24px; color=black;"></i>
+        </a>
+        
+        <!-- Display the user's money -->
+        <p>Your balance: ${{ user_balance }}</p>
+    </div>
+    
+    <h2>Items:</h2>
+    <ul>
+       
+        {% for item in items %}
+            <li>
+                <a href="{{ url_for('item_description', item_id=item) }}">{{ item }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('submit_coupon') }}" method="post">
+        <h2 for="coupon">Redeem Coupon:</h2>
+        <input type="text" id="coupon" name="coupon" required>
+        <button type="submit">Redeem</button>
+    </form>
+
+    <h2>Leave Feedback:</h2>
+    <form action="{{ url_for('submit_feedback') }}" method="post">
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>

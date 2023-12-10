@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: hidden-web
+    image: hidden-web:latest
+    ports:
+      - "1202:1202"
+    restart: on-failure

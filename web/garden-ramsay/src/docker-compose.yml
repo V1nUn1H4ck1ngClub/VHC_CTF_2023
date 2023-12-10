@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: garden-ramsay
+    image: garden-ramsay:latest
+    ports:
+      - "19024:80"
+    restart: on-failure

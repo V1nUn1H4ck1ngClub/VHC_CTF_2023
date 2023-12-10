@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  app:
+    # remember to change the container_name and image name. 
+    container_name: eta
+    image: eta:latest
+    ports:
+      - "13370:13370"
+    restart: on-failure

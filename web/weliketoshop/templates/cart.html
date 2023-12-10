@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    
+    <p>User's Balance: ${{ user_balance }}</p>
+
+    <h2>Items in Cart:</h2>
+    <ul>
+        {% for item, count in cart_items.items() %}
+            <li>
+                {{ item }}: {{ count }}
+                <!-- Button to decrease quantity of the item -->
+                <form action="{{ url_for('decrease_quantity', item_id=item) }}" method="post" style="display: inline;">
+                    <button type="submit"><i class="fa-solid fa-minus"></i></button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Discount Code:</h2>
+    <form action="{{ url_for('cart') }}" method="POST">
+        <label for="discount_code">Enter Discount Code:</label>
+        <input type="text" id="discount_code" name="discount_code" required>
+        <button type="submit">Apply Discount</button>
+    </form>
+
+    {% if discount_message %}
+        <form action="{{ url_for('remove_discount') }}" method="POST" style="display: inline;">
+            {{ discount_message }}
+            <button type="submit">  <i class="fa-solid fa-minus"></i> </button>
+        </form>
+    {% endif %}
+
+    <form action="{{ url_for('checkout') }}" method="get">
+        <p>Total: ${{ total }}</p>
+        <button type="submit">Checkout</button>
+    </form>
+
+    <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+</body>
+</html>

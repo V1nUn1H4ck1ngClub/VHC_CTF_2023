@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  app:
+    # remember to change the container_name and image name. 
+    container_name: blindfold
+    image: blindfold:latest
+    ports:
+      - "13371:13371"
+    restart: on-failure

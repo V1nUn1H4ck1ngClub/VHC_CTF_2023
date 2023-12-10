@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app:
+    # remember to change the container_name and image name. 
+    container_name: vulnsis
+    image: vulnsis:latest
+    ports:
+      - "13372:13372"
+    restart: on-failure
+    deploy:
+      resources:
+        limits: 
+          cpus: "0.1"
+          memory: 50M
+        reservations:
+          cpus: "0.1"
+          memory: 50M
