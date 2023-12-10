@@ -1,3 +1,5 @@
+# all you need is https://tailcall.net/posts/cracking-rngs-lcgs/
+
 with open("output.txt", "r") as f:
     seed = int(f.readline().strip().split(" = ")[1])
     e = int(f.readline().strip().split("=")[1])
@@ -18,6 +20,7 @@ from Crypto.Util.number import long_to_bytes, bytes_to_long, isPrime, size
 from math import gcd
 from functools import reduce
 
+# Reimplement of LCG 
 class _LCG:
     def __init__(self, multiplier, increment, modulus, lcg_s):
         self.state = lcg_s
