@@ -1,4 +1,4 @@
-# L33t L3th4l V0rt3x M0n5t3r (Author: [sashaNull](https://github.com/s4shaNull))
+# L33t L3th4l V0rt3x M0n5t3r (Author: [sashaNull](https://github.com/sashaNull))
 
 ## 1. Description:
 So, my buddy, bullNull (yes, that's his real name, don't ask), is on this academic adventure at UIUC. He's knee-deep in the 3+2 Integrated Degree Program, chasing that elusive Master's degree.  And guess what? He's not just hitting the books; he's interning at Professor Vikram Adve's Computing Lab!
