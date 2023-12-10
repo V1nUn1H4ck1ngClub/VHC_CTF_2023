@@ -22,7 +22,7 @@ Hello 👋 This is VinUni Hacking Club, and here is our archive for the codebase
 
 7. [Cookie](./pwn/cookie/) (author: h114mx001 & sashaNull)
 8. [vulnSIS](./pwn/vulnsis/) (author: sashaNull)
-9. [no exit()](./pwn/No%20Exit()/) (author: sashaNull)
+9. [no exit()](./pwn/noexit/) (author: sashaNull)
 
 ### Reverse:
 
