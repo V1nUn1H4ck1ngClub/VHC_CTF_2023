@@ -1,4 +1,4 @@
-# no exit() (Author: [sashaNull](https://github.com/s4shaNull))
+# no exit() (Author: [sashaNull](https://github.com/sashaNull))
 
 ## 1. Description:
 https://www.youtube.com/watch?v=uG_KHjd_PSc&ab_channel=Movieclips
