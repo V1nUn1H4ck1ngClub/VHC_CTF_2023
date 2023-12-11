@@ -57,6 +57,8 @@ When access the challenge, we are given an upload form, which only accepts small
 - First, it checks the [magic byte](https://en.wikipedia.org/wiki/List_of_file_signatures) - the byte determining the file type. In order to bypass this, I just simply grab a legit JPG file on the Internet and submit to the form.
 
 - Next, we have the code checking if `.jpg` or `.jpeg` exists in the filename. This is really dangerous because file name can contain more than 1 dot sign (which seperate the name and extension). Therefore, I can simply write a file named "a.jpg.php" and this is considered *valid* in the server side.
+
+
 ![](assets/strpos%20php.png)
 
 At this point, we got enough ingredients. Let's cook the exploit script:
